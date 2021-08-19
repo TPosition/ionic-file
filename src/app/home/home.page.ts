@@ -24,12 +24,14 @@ export class HomePage {
   this.file.createFile(this.file.dataDirectory, 'filename', true);
   }
   async readFile() {
+    console.log("file read");
   this.promise = this.file.readAsText(this.file.dataDirectory, 'filename');
   await this.promise.then(value => {
   console.log(value);
   });
   }
   writeFile() {
+    console.log("file written");
   this.stringToWrite = 'I learned this from Medium';
   this.blob = new Blob([this.stringToWrite], { type: 'text/plain' });
   this.file.writeFile(this.file.dataDirectory, 'filename', this.blob, {replace: true, append: false});
