@@ -1,5 +1,7 @@
 {
   "name": "ionic-ang-file",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
